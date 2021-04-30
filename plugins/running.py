@@ -33,7 +33,7 @@ async def run(bot, message):
             if message.video:
                 file_name = message.video.file_name
             else:
-                file_name =  
+                file_name = None
             await bot.copy_message(
                 chat_id=TO,
                 from_chat_id=FROM,       
