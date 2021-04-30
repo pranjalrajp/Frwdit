@@ -32,10 +32,7 @@ async def run(bot, message):
         try:
             if message.video:
                 file_name = message.video.file_name
-            elif message.document:
-                file_name = message.document.
-            elif message.audio:
-                file_name = message.audio.file_name
+            
             else:
                 file_name = None
             await bot.copy_message(
