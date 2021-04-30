@@ -32,8 +32,10 @@ async def run(bot, message):
         try:
             if message.video:
                 file_name = message.video.file_name
+            elif message.doucment:
+                file_name = message.doucument.file_name
             else:
-                file_name = N
+                file_name = None
             await bot.copy_message(
                 chat_id=TO,
                 from_chat_id=FROM,       
