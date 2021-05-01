@@ -28,7 +28,7 @@ async def run(bot, message):
     )
 
     files_count = 0
-    async for message in bot.USER.iter_history(chat_id=FROM, limit=Config.LIMIT, offset=Config.SKIP_NO, reverse=False):
+    async for message in bot.USER.iter_history(chat_id=FROM, limit=Config.LIMIT, offset=Config.SKIP_NO, reverse=True):
         try:
             if message.video:
                 file_name = message.video.file_name
