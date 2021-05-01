@@ -33,7 +33,7 @@ async def run(bot, message):
             if message.video:
                 file_name = message.video.file_name
             elif message.document:
-                file_name = message.document.file_name
+                file_name = message.document.date
             elif message.audio:
                 file_name = message.audio.file_name
             else:
@@ -41,7 +41,7 @@ async def run(bot, message):
             await bot.copy_message(
                 chat_id=TO,
                 from_chat_id=FROM,       
-                caption=Translation.CAPTION.format(file_nam1e),
+                caption=Translation.CAPTION.format(file_name),
                 message_id=message.message_id
             )
             files_count += 1
