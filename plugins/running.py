@@ -33,7 +33,7 @@ async def run(bot, message):
             if message.video:
                 file_name = message.video.file_name
             elif message.document:
-                file_name = message.document.mime_type
+                file_name = message.document.file_name
             elif message.audio:
                 file_name = message.audio.file_name
             else:
